@@ -1,0 +1,16 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app index.js",
+    "dev": "node --watch app.js"},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
