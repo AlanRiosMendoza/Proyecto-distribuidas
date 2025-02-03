@@ -23,6 +23,11 @@ button {
     background-color: #f85151;
 }
 
+button:hover {
+    background-color: #f76a6a;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
 h1 {
     color: #707070;
     font-weight: bold;

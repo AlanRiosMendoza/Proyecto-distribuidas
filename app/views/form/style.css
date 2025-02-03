@@ -141,8 +141,8 @@ html .form__button:focus, html .form__button:active {
 }
 
 html .form__button:hover {
-  background-color: #f76a6a; /* Color un poco más claro */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Añadir una sombra sutil */
+  background-color: #f76a6a;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 768px) {
