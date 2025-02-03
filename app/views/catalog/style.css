@@ -15,7 +15,7 @@ header {
     padding: 10px 0;
 }
 
-button {
+.addProductButton {
     height: 40px;
     border: none;
     padding: 0 10px;
@@ -23,7 +23,7 @@ button {
     background-color: #f85151;
 }
 
-button:hover {
+.addProductButton:hover {
     background-color: #f76a6a;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
@@ -163,4 +163,23 @@ h1 {
     color: #f85151;
     margin-bottom: 10px;
     display: block;
+}
+
+.back-to-auth {
+    font-size: 1.2rem;
+    color: #303030;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    align-self: start;
+    transition: all 250ms;
+}
+
+.back-to-auth:hover {
+    color: #f85151;
+    text-decoration: underline;
 }
