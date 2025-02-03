@@ -54,7 +54,7 @@ h1 {
 
 /* Productos */
 .mostrador {
-    width: 70%; /* Ocupa la mayor parte del espacio */
+    width: 100%; /* Ocupa la mayor parte del espacio */
     transition: .5s ease;
 }
 
