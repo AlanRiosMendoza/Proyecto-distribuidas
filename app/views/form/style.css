@@ -1,7 +1,3 @@
-/* #################### ################################ #################### */
-/* #################### RELEVANT CODE STARTS AT LINE 145 #################### */
-/* #################### ################################ #################### */
-/* Global Styles */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -13,9 +9,6 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   background-color: #edeee9;
- /* #################### ########################### #################### */
- /* #################### All form-related CSS below. #################### */
- /* #################### ########################### #################### */
 }
 html body {
   background-color: #edeee9;
@@ -30,7 +23,7 @@ html body {
   align-items: flex-start;
 }
 html body h1 {
-  font-size: clamp(1rem, 6vw, 10rem);
+  font-size: clamp(1rem, 4vw, 5rem);
   margin: 15vh 0 2rem;
 }
 html body a {
@@ -127,10 +120,38 @@ html .form__input {
   margin: 0.625rem auto;
   transition: all 250ms;
 }
+html .form__button {
+  width: clamp(120px, 50vw, 420px);
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  margin: 0.625rem auto;
+  border: none;
+  color: #fff;
+  background-color: #f85151;
+  border-radius: 2px;
+  transition: all 250ms;
+}
+
+html .form__button:focus, html .form__button:active {
+  height: 2.5rem;
+  outline: none;
+  border-top-color: rgba(0, 0, 0, 0.1);
+  transform: none;  
+  box-shadow: none;
+}
+
+html .form__button:hover {
+  background-color: #f76a6a; /* Color un poco más claro */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Añadir una sombra sutil */
+}
+
 @media (min-width: 768px) {
   html .form__input {
     width: clamp(120px, 35vw, 420px);
  }
+ html .form__button {
+  width: clamp(120px, 35vw, 420px);
+  }
 }
 html .form__input:focus {
   outline: none;
@@ -162,3 +183,6 @@ html .form__label {
   transition: all 500ms;
   pointer-events: none;
 }
+
+
+
