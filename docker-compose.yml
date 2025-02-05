@@ -39,7 +39,7 @@ services:
     restart: on-failure
 
   databaseA:
-    image: mysql:latest
+    image: mysql:8.3.0
     ports:
       - "3306:3306"
     environment:
@@ -57,7 +57,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
 
   databaseB:
-    image: mysql:latest
+    image: mysql:8.3.0
     ports:
       - "3307:3306"
     environment:
