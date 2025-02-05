@@ -40,6 +40,7 @@ async function startServer() {
     });
 
     app.get('/auth', (req, res) => {
+        console.log('Peticion recibida');
         res.sendFile(path.join(__dirname, 'views', 'auth', 'auth.html'));
     });
 
