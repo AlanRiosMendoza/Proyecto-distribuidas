@@ -18,22 +18,24 @@
       <h2>Registrar un Nuevo Producto</h2>
       <p>Completa los detalles a continuación para registrar tu producto.</p>
     </div>
-    <form action="" class="form">
-
-      <input type="text" placeholder="Nombre del Producto" class="form__input" id="product-name" />
+    <form action="/register-product" method="POST" class="form">
+      <input type="text" name="productName" placeholder="Nombre del Producto" class="form__input" id="product-name"
+        required />
       <label for="product-name" class="form__label">Nombre del Producto</label>
 
-      <textarea placeholder="Descripción del Producto" class="form__input" id="product-description"></textarea>
+      <textarea name="productDescription" placeholder="Descripción del Producto" class="form__input"
+        id="product-description" required></textarea>
       <label for="product-description" class="form__label">Descripción</label>
 
-      <input type="url" placeholder="URL de la Imagen del Producto" class="form__input" id="product-image" />
+      <input type="url" name="productImage" placeholder="URL de la Imagen del Producto" class="form__input"
+        id="product-image" required />
       <label for="product-image" class="form__label">Imagen del Producto (URL)</label>
 
-      <input type="number" step="0.01" placeholder="Precio" class="form__input" id="product-price" />
+      <input type="number" name="productPrice" step="0.01" placeholder="Precio" class="form__input" id="product-price"
+        required />
       <label for="product-price" class="form__label">Precio</label>
 
-      <button class="form__button">Registrar producto</button>
-
+      <button type="submit" class="form__button">Registrar producto</button>
     </form>
   </div>
 </body>

@@ -109,6 +109,22 @@ async function startServer() {
             res.status(500).send('Error al iniciar sesión');
         }
     });
+
+    app.post('/register-product', async (req, res) => {
+        const { productName, productDescription, productImage, productPrice } = req.body;
+
+        try {
+            const [result] = await connection.query(
+                'INSERT INTO productos (nombre, descripcion, imagen, precio) VALUES (?, ?, ?, ?)',
+                [productName, productDescription, productImage, productPrice]
+            );
+            console.log('Producto registrado:', result);
+            res.sendFile(path.join(__dirname, 'views', 'catalog', 'catalog.html'));
+        } catch (error) {
+            console.error('Error al registrar el producto:', error);
+            res.status(500).send('Error al registrar el producto');
+        }
+    });
 }
 
 startServer().catch(err => {
