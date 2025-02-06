@@ -36,6 +36,7 @@ async function startServer() {
 
     app.use(express.static(path.join(__dirname, 'assets')));
     app.use('/assets', express.static(path.join(__dirname, 'assets')));
+    app.use(express.static(path.join(__dirname, 'views')))
 
     app.get('/', (req, res) => {
         res.redirect('/auth');
@@ -93,13 +94,13 @@ async function startServer() {
 
         try {
             const [rows] = await connection.query(
-                'SELECT * FROM usuarios WHERE correo = ? AND contraseña = ?',
+                'SELECT * FROM usuarios WHERE correo = ? AND contrasenia = ?',
                 [email, pswd]
             );
 
             if (rows.length > 0) {
                 console.log('Inicio de sesión exitoso:', rows[0]);
-                res.send('Inicio de sesión exitoso');
+                res.sendFile(path.join(__dirname, 'views', 'catalog', 'catalog.html'));
             } else {
                 res.status(401).send('Credenciales incorrectas');
             }
