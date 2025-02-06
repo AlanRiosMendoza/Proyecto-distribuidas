@@ -43,8 +43,12 @@ services:
     ports:
       - "3306:3306"
     environment:
+      MYSQL_ROOT_USER: root
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: proyecto
+      MYSQL_REPLICATION_USER: replica_user
+      MYSQL_REPLICATION_PASSWORD: replica_password
+    command: --server-id=1 --log-bin=mysql-bin --binlog-do-db=proyecto
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     restart: on-failure
@@ -63,8 +67,12 @@ services:
     ports:
       - "3307:3306"
     environment:
+      MYSQL_ROOT_USER: root
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: proyecto
+      MYSQL_REPLICATION_USER: replica_user
+      MYSQL_REPLICATION_PASSWORD: replica_password
+    command: --server-id=2 --relay-log=mysql-relay-bin --log-bin=mysql-bin --binlog-do-db=proyecto
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     restart: on-failure
