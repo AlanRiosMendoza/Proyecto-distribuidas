@@ -45,6 +45,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: proyecto
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     restart: on-failure
 
   phpmyadmin:
@@ -63,6 +65,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: proyecto
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     restart: on-failure
 
   phpmyadminB:

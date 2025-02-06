@@ -4,7 +4,7 @@
 <head>
     <title>Autenticación</title>
     <link rel="icon" type="image/png" href="../../assets/shoes.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/styleauth.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
 
@@ -12,21 +12,21 @@
     <div class="main">
         <input type="checkbox" id="chk" aria-hidden="true">
         <div class="signup">
-            <form>
+            <form action="/register" method="POST">
                 <label for="chk" aria-hidden="true">Registrarse</label>
                 <input type="text" name="txt" placeholder="Nombres completos" required="">
                 <input type="email" name="email" placeholder="Correo electrónico" required="">
                 <input type="number" name="broj" placeholder="Número de teléfono" required="">
                 <input type="password" name="pswd" placeholder="Contraseña" required="">
-                <button>Registrarse</button>
+                <button type="submit">Registrarse</button>
             </form>
         </div>
         <div class="login">
-            <form>
+            <form action="/login" method="POST">
                 <label for="chk" aria-hidden="true">Iniciar sesión</label>
                 <input type="email" name="email" placeholder="Correo electrónico" required="">
                 <input type="password" name="pswd" placeholder="Contraseña" required="">
-                <button>Iniciar sesión</button>
+                <button type="submit">Iniciar sesión</button>
             </form>
         </div>
     </div>
